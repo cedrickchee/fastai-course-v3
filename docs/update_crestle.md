@@ -34,7 +34,7 @@ This should give you the latest of the course notebooks. If you modified some of
 
 ### Update the fastai library
 
-To update the fastai library, open the terminal like before and type
+To update the fastai library, open the terminal like before and type:
 
 ```bash
 conda update conda
@@ -49,3 +49,12 @@ Once you're finished navigate back to the dashboard tab and click Stop Jupyter
 
 <img alt="" src="/images/crestle/stop_jupyter.png" class="screenshot">
 
+### Reconnecting to your instance
+
+In order to reconnect in the future you'll just follow the exact same steps listed above, some lesson specific actions may need to be taken though due to updates to the fast.ai course throughout the quarter.
+
+#### Lesson 2
+
+If you just created an instance you're good to go.
+
+If you are a returning user you need to open the terminal and type: `rm -r ~/.datasets/camvid`

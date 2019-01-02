@@ -22,6 +22,12 @@ entries:
       title: Salamander (Easy)
       url: /start_salamander.html
     - output: web
+      title: FloydHub (Easy)
+      url: /start_floydhub.html
+    - output: web
+      title: Colab (Harder)
+      url: /start_colab.html
+    - output: web
       title: SageMaker (Harder)
       url: /start_sagemaker.html
     - output: web
@@ -43,6 +49,12 @@ entries:
       title: Salamander
       url: /update_salamander.html
     - output: web
+      title: FloydHub
+      url: /update_floydhub.html
+    - output: web
+      title: Colab
+      url: /update_colab.html
+    - output: web
       title: SageMaker
       url: /update_sagemaker.html
     - output: web
@@ -54,6 +66,18 @@ entries:
     - output: web
       title: Crestle
       url: /update_crestle.html
+  - title: Production
+    output: web
+    folderitems:
+    - output: web
+      title: Zeit
+      url: /deployment_zeit.html
+    - output: web
+      title: AWS BeanStalk
+      url: /deployment_aws_beanstalk.html 
+    - output: web
+      title: Google App Engine
+      url: /deployment_google_app_engine.html   
   - title: fastai v1
     output: web
     folderitems:

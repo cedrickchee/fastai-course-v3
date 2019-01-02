@@ -9,6 +9,8 @@ sidebar: home_sidebar
 
 This guide explains how to set up Google Cloud Platform (GCP) to use PyTorch 1.0.0 and fastai 1.0.2. At the end of this tutorial you will be able to use both in a GPU-enabled Jupyter Notebook environment.
 
+If you are returning to work and have previously completed the steps below, please go to the [returning to work](http://course-v3.fast.ai/update_gcp.html) section.
+
 ## Pricing
 
 GCP charges separately for the base CPU platform, and the GPU. We have two recommended configurations, *standard*, and *budget*. Note that all prices assume you are using *preemptible instances* (see below for details).
@@ -155,7 +157,7 @@ Please note we are running a preemptible instance (notice the '--preemptible' pa
 
 If your instance is stopped, your saved data will be kept safe but if you are running a model, the progress will be lost.
 
-These characteristics make preemptible instances a nice option for beginners, since you will not be running very deep models that take days to run. If however, you do need to run models without interruption for long periods of time, you can always call the same command but skip the '--preemptible' parameter. Take into account this will increase your costs to about $0.68 an hour.
+These characteristics make preemptible instances a nice option for beginners, since you will not be running very deep models that take days to run. If however, you do need to run models without interruption for long periods of time, you can always call the same command but skip the '--preemptible' parameter. Take into account this will increase your costs to about $1.29 an hour.
 
 ## Step 4: Access fast.ai materials and update packages
 
@@ -163,27 +165,23 @@ Now your command line which should show a prompt along the lines of `jupyter@my-
 
 You should make sure Github is configured and pull from the repository. You can do this by typing the following lines:
 
-`cd tutorials/fastai`
+``` basg
+cd tutorials/fastai/course-v3
+git checkout .
+git pull
+```
 
-`git checkout .`
+You should also update the fastai library:
 
-`git pull`
+``` bash
+sudo /opt/anaconda3/bin/conda install -c fastai fastai
+```
 
 Next from your [jupyter notebook](http://localhost:8080/tree), click on 'tutorials', 'fastai' and you should look at something like this
 
 <img alt="nb tuto" src="/images/jupyter.png" class="screenshot">
 
-Now click on 'New' in the upper right corner of your screen and 'Terminal':
-
-<img alt="terminal" src="/images/terminal.png" class="screenshot">
-
-This will open a new window with a terminal. You should type the following commands to update your packages:
-
-`conda update conda`
-
-`conda install -c fastai fastai`
-
-Once you have run these two commands close the window and go back to the [first page](index.html) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
+Now go back to the [first page](index.html) to see how to use this jupyter notebook and run the jupyter notebook tutorial. Come back here once you're finished and *don't forget to stop your instance* with the next step.
 
 ## Step 5: Stop an instance
 
